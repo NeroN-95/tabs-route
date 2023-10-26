@@ -19,19 +19,17 @@ const Navigation = () => {
   const navigate = useNavigate();
   const firstLink = `#/${tabsData.find((item) => item.order === OrdersTab.FirstTab).path}`;
 
-  const [activeLink, setActiveLink] = useState(firstLink);
+  const [activeLink, setActiveLink] = useState(location.hash ?? firstLink);
 
   useEffect(() => {
     if (location.hash) {
       setActiveLink(location.hash)
+      navigate(location.hash)
     } else {
       setActiveLink(firstLink)
+      navigate(firstLink)
     }
-  }, [firstLink, location.hash]);
-
-  useEffect(() => {
-    navigate(firstLink)
-  }, [firstLink, navigate]);
+  }, [firstLink, location.hash, navigate]);
 
 
   const rendersComponents = () => {
