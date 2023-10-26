@@ -1,0 +1,20 @@
+.WrapperNavigation {
+    display: flex;
+    flex-direction: column;
+}
+
+.ContainerTabs {
+    margin: 10px 10px;
+    width: 100%;
+}
+
+.WrapperNavigationTabs {
+    display: flex;
+}
+
+.WrapperNavigationTabs {
+    display: flex;
+}
+
+
+

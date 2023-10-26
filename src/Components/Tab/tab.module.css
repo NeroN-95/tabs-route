@@ -1,0 +1,14 @@
+.WrapperTabs {
+    display: flex;
+}
+
+.Tab {
+    background: #61dafb;
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+.ActiveTab {
+    background-color: #0015ff; /* Пример цвета фона для активной вкладки */
+    color: #fff; /* Пример цвета текста для активной вкладки */
+}
