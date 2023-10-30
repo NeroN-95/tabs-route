@@ -1,8 +1,8 @@
-import React from 'react';
 import styles from './tab.module.css';
 import {useLocation, useNavigate} from "react-router-dom";
+import {TabProps} from "../../types/data";
 
-function Tab({title, path, setActiveLink, order, activeLink}) {
+function Tab({order, setActiveLink, activeLink, path,title}: TabProps) {
     const location = useLocation();
     const navigate = useNavigate();
     const link = `#${location.pathname}${path}`;
@@ -11,7 +11,7 @@ function Tab({title, path, setActiveLink, order, activeLink}) {
     const isActive = link === activeLink;
 
 
-    const handleNavigate = (event) => {
+    const handleNavigate = (event: React.MouseEvent<HTMLElement> ) => {
         event.preventDefault();
         navigate(link)
         setActiveLink(link)
